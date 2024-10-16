@@ -1,0 +1,70 @@
+/*-------------------
+  Featured Projects Styles
+---------------------*/
+.stdl-section-featured-projects {
+    position: relative;
+    padding: 60px 0;
+    z-index: auto;
+    @include breakpoint(md) {
+        padding: 80px 0;
+    }
+    .stdl-section__title {
+        margin-bottom: 60px;
+        .stdl-description {
+            margin: 0 auto;
+            @include breakpoint(md) {
+                max-width: 70%;
+            }
+        }
+
+    }
+}
+
+.stdl-featured-projects {
+    display: grid;
+    gap: 40px;
+    .stdl-featured-project{
+        display: grid;
+        gap: 40px;
+        align-items: center;
+        &:nth-child(2n) {
+            .featured-project__thumb {
+                @include breakpoint(md) {
+                    order: 2;
+                }
+                img {
+                    border-radius: 10px;
+                }
+            }
+        }
+        .featured-project__thumb {
+            img {
+                border-radius: 10px;
+            }
+        }
+        .block_title {
+            margin: 27px 0 22px;
+        }
+        .block_decs {
+            margin-bottom: 35px;
+            @include breakpoint(md) {
+                margin-bottom: 85px;
+            }
+            &.post-excerpt {
+                display: -webkit-box;
+                -webkit-line-clamp: 3 !important;
+                -webkit-box-orient: vertical !important;
+                overflow: hidden !important;
+                text-overflow: ellipsis !important;
+            }
+           
+        }
+        @include breakpoint(md) {
+            gap: 80px;
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+    @include breakpoint(md) {
+        row-gap: 80px;
+    }
+}

@@ -1,0 +1,226 @@
+/*-------------------
+  Hero v2 - style
+---------------------*/
+.stdl-section-hero {
+    &.hero-v2 {
+        padding-top: 0;
+        .stdl-hero__v2-img {
+            position: relative;
+            height: inherit;
+            overflow: hidden;
+            height: 650px;
+            .hero-scrolling-img {
+                width: 100%;
+                height: 1920px;
+                // background-repeat: no-repeat !important;
+                background-size: contain !important;
+                animation: scrolled 20s linear infinite;
+            }
+        }
+    }
+   
+}
+
+@keyframes scrolled {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 0 -1920px;
+    }
+}
+
+.hero-grid-items {
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 650px;
+    position: absolute;
+    top: 0;
+    left: 0%;
+    gap: 25px;
+    transform: translateX(0%);
+    overflow: visible;
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 25px;
+        z-index: 200;
+        background: linear-gradient(rgb(24, 24, 27), rgba(0,0,0,0));
+    }    
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: auto;
+        bottom: 0px;
+        left: 0px;
+        width: 100%;
+        height: 25px;
+        z-index: 200;
+        background: linear-gradient(rgba(0,0,0,0), rgb(24, 24, 27));
+    }
+    .col {
+        position: relative;
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        width: 100%;
+        align-self: flex-start;
+        justify-self: flex-start;
+        gap: 25px;
+        &:nth-child(2) {
+            align-self: flex-end;
+            justify-self: flex-end;
+        }
+    }
+    .hero-grid-item {
+        img {
+            width: 100%;
+            // min-height: 195px;
+            // object-fit: cover;
+            border-radius: 4px;
+        }
+        &:nth-child(odd) {
+            // margin-top: -60px;
+        } 
+        &:nth-child(even) {
+          
+        }
+    }
+}
+
+.hero-grid-items-normal {
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(2, 1fr);
+    .hero-grid-item {
+        img {
+            width: 100%;
+            min-height: 195px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+        &:nth-child(odd) {
+            animation: scrollTopToBottom 10s linear infinite alternate;
+        } 
+        &:nth-child(even) {
+            margin-top: -60px;
+            animation: scrollBottomToTop 10s linear infinite alternate;
+        }
+    }
+}
+
+
+// .column img {
+//     animation: scrollTopToBottom 10s linear infinite;
+// }
+
+// .column.reverse img {
+//     animation: scrollBottomToTop 10s linear infinite;
+// }
+
+@keyframes scrollTopToBottom {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes scrollBottomToTop {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(100%);
+    } 
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+.stdl-section-marquebox {
+    position: relative;
+    display: -ms-grid;
+    display: grid;
+    grid-auto-columns: 1fr;
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: auto auto;
+    grid-template-rows: auto auto;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    z-index: 7;
+    background-attachment: scroll !important;
+    .text-marquebox-items{
+        -ms-grid-column: span 1;
+        grid-column-start: span 1;
+        -ms-grid-column-span: 1;
+        grid-column-end: span 1;
+        -ms-grid-row: span 1;
+        grid-row-start: span 1;
+        -ms-grid-row-span: 1;
+        grid-row-end: span 1;
+        width: 65%;
+        animation: 35s linear infinite stdl-marque-text;
+        will-change: transform;
+        white-space: nowrap;
+        ul {
+            margin-bottom: 0px;
+            padding-left: 0px;
+            list-style-type: none;
+            li{
+                position: relative;
+                display: inline-block;
+                margin-left: 65px;
+                margin-right: 65px;
+                font-size: 110px;
+                line-height: 130px;
+                text-align: center;
+                letter-spacing: 2px;
+                font-weight: 400;
+                color: transparent;
+                -webkit-text-stroke: 1px #fff;
+                &:nth-child(2n) {
+                    -webkit-text-stroke: 0px;
+                    color: #fff;
+                }
+                &::before {
+                    position: absolute;
+                    content: '';
+                    left: -103px;
+                    height: 17px;
+                    width: 65px;
+                    border: 1px solid #fff;
+                    bottom: 17px;
+                }
+            }
+        }
+    }
+}
+.stdl-section-marquebox .text-marquebox-items:hover {
+    animation-play-state: paused!important;
+}
+
+.stdl-gallery-wrapper {
+    .margque-courses {
+        position: relative;
+        background-image: url(../img/courses.jpg);
+        background-repeat: repeat-x;
+        background-size: auto;
+        height: 460px;
+        z-index: 1;
+    }
+}

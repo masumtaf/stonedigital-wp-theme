@@ -1,0 +1,200 @@
+/*-------------------
+  ShowCase Project Styles
+---------------------*/
+
+.stdl-section-showcase {
+    padding: 100px 0;
+    background: var(--color-dark);
+}
+
+.stdl-showcase {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    .stdl-showcase-item {
+        position: relative;
+        margin-bottom: 200px;
+        &:last-child, 
+        &:nth-last-child(2) {
+            margin-bottom: 0;
+        }
+        &__img {
+            background: var( --color-dark-gray);
+            border-radius: 10px;
+            text-align: center;
+            img {
+                margin-top: -50px;
+            }
+        }  
+    
+        &__content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            h4 {
+                font-size: 16px;
+                line-height: 34px;
+                font-weight: 300;
+                color: var(--color-white); 
+                margin: 0;
+            }
+            a,
+            span {
+                font-size: 13px;
+                line-height: 34px;
+                font-weight: 300;
+                color: var(--color-white); 
+            }
+        }  
+    
+        &__content-demo {
+            z-index: 10;
+            position: absolute;
+            bottom: 0px;
+            height: auto;
+            padding: 50px;
+            box-sizing: border-box;
+            width: 100%;
+            cursor: default;
+            pointer-events: none;
+            opacity: 1;
+            -webkit-transition: all 0.2s ease-out 0.4s;
+            transition: all 0.2s ease-out 0.4s;
+        
+            h4 {
+                font-size: 24px;
+                line-height: 30px;
+                font-weight: 300;
+                color: var(--color-white); 
+                margin: 0;
+                display: block;
+                margin: 0;
+                margin-right: 4px;
+                min-width: 10px;
+                width: auto;
+                box-sizing: border-box;
+                opacity: 0;
+                -webkit-transform: translateY(30px);
+                transform: translateY(30px);
+                span {
+                    display: block;
+                    margin: 0;
+                    margin-right: 4px;
+                    min-width: 10px;
+                    width: auto;
+                    box-sizing: border-box;
+                    opacity: 0;
+                    -webkit-transform: translateY(30px);
+                    transform: translateY(30px);
+                }
+                @include breakpoint(md) {
+                    font-size: 32px;
+                    line-height: 34px;
+                }
+                &.stdl-client-name {
+                    font-size: 18px;
+                    line-height: 34px;
+                    @include breakpoint(md) {
+                        font-size: 22px;
+                        line-height: 34px;
+                    }
+                }
+
+            }
+            a,
+            span {
+                font-size: 13px;
+                line-height: 34px;
+                font-weight: 300;
+                color: var(--color-white); 
+                display: block;
+                margin: 0;
+                margin-right: 4px;
+                min-width: 10px;
+                width: auto;
+                box-sizing: border-box;
+                opacity: 0;
+                -webkit-transform: translateY(30px);
+                transform: translateY(30px);
+            }
+            .item-arrow {
+                width: 30px;
+                height: 30px;
+                position: relative;
+                display: block;
+                overflow: hidden;
+                margin-bottom: 30px;
+                padding-left: 4px;
+                padding-top: 4px;
+                i.arrow-icon {
+                    box-sizing: border-box;
+                    display: block;
+                    position: relative;
+                    top: 0px;
+                    left: 0px;
+                    height: 20px;
+                    width: 20px;
+                    border: solid #fff;
+                    border-width: 0px 3px 3px 0px;
+                    opacity: 0;
+                    -webkit-transform: translateY(30px);
+                    transform: translateY(30px);
+                    font-style: italic;
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        width: 28px;
+                        height: 3px;
+                        top: 7px;
+                        left: -6px;
+                        background-color: #fff;
+                        transform: rotate(45deg);
+                        -webkit-transform: rotate(45deg);
+                        font-style: italic;
+                    }
+                }
+            }
+        }
+        // .item-parallax {
+        //     height: 100%;
+        //     width: 100%;
+        //     position: absolute;
+        //     pointer-events:initial;
+        // }
+        &:nth-of-type(2n+1) {
+            transform: translateX(0px);
+            -webkit-transform: translateX(0px);				
+        }
+        &:nth-of-type(2n+2) {
+            transform: translateX(0px);
+            -webkit-transform: translateX(0px);
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        &:nth-of-type(4n+1) .item-parallax {
+            height: 100%;
+            width: 100%;
+        }
+        
+        &:nth-of-type(4n+2) .item-parallax {
+            height: 60%;
+            width: 55%;
+            bottom:0;
+            right:0;
+        }
+        
+        &:nth-of-type(4n+3) .item-parallax {
+            height: 60%;
+            width: 55%;
+            bottom:0;
+            left:0;
+        }
+        
+        &:nth-of-type(4n+4) .item-parallax {
+            height: 100%;
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,156 @@
+.dashicons-stdl-block-icon:before {
+	content: "";
+	display: block;
+	background-image: url("../../img/block-icon.png");
+	width: 20px;
+	height: 20px;
+	background-size: cover;
+	background-position: 50%;
+	border-radius: 3px;
+}
+html :where(.wp-block) {
+	max-width: calc(100% - 30px);
+}
+.edit-post-visual-editor .edit-post-visual-editor__content-area .acf-block-fields.acf-fields .acf-editor-wrap iframe {
+	height: 200px !important;
+	min-height: 150px !important;
+}
+
+
+.editor-styles-wrapper .wp-block-buttons {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 40px;
+}
+.editor-styles-wrapper .wp-block-buttons.text-left {
+  justify-content: flex-start;
+}
+.editor-styles-wrapper .wp-block-buttons.text-center {
+  justify-content: center;
+}
+.editor-styles-wrapper .wp-block-buttons.text-right {
+  justify-content: flex-end;
+}
+.editor-styles-wrapper .wp-block-buttons .wp-block-button .wp-block-button__link {
+  font-size: 15px;
+  line-height: 23px;
+  letter-spacing: 0px;
+  padding: 11px 15px;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 220px;
+  text-align: center;
+  white-space: nowrap;
+  transition: all 0.3s ease-in-out;
+}
+.editor-styles-wrapper .wp-block-buttons .wp-block-button.btn-primary,
+.editor-styles-wrapper .wp-block-buttons .wp-block-button.btn-primary,
+.editor-styles-wrapper .wp-block-buttons .wp-block-button.btn-primary{
+	width: 100%;
+	max-width: 220px;
+}
+.editor-styles-wrapper .wp-block-buttons .wp-block-button.btn-primary .wp-block-button__link{
+  color: var(--color-black);
+  background: var(--color-gray);
+  border: 1px solid var(--color-gray);
+}
+.editor-styles-wrapper .wp-block-buttons .wp-block-button.btn-primary .wp-block-button__link:hover {
+  color: var(--color-gray);
+  background: transparent;
+  border: 1px solid var(--color-gray);
+}
+.editor-styles-wrapper .wp-block-buttons .wp-block-button.btn-primary-tp .wp-block-button__link{
+  color: var(--color-gray);
+  background: transparent;
+  border: 1px solid var(--color-gray);
+}
+.editor-styles-wrapper .wp-block-buttons .wp-block-button.btn-primary-tp .wp-block-button__link:hover {
+  color: var(--color-black);
+  background: var(--color-gray);
+  border: 1px solid var(--color-gray);
+}
+.editor-styles-wrapper .wp-block-buttons .wp-block-button.btn-secondary .wp-block-button__link{
+  color: var(--color-gray);
+  background: transparent;
+  border: 1px solid var(--color-gray);
+}
+.editor-styles-wrapper .wp-block-buttons .wp-block-button.btn-secondary .wp-block-button__link:hover{
+  color: var(--color-black);
+  background: var(--color-gray);
+  border: 1px solid var(--color-gray);
+}
+.editor-styles-wrapper .wp-block-buttons .wp-block-button.btn-link .wp-block-button__link{
+  color: var(--color-gray);
+  font-size: 16px;
+  line-height: 23px;
+  letter-spacing: 0px;
+  padding: 11px 0px;
+  line-height: 28px;
+  background-color: transparent;
+  text-decoration: underline;
+  max-width: auto;
+  width: auto;
+}
+@media (min-width: 768px) {
+	.editor-styles-wrapper .wp-block-buttons {
+		flex-direction: row;
+	}
+}
+.editor-styles-wrapper .wp-block-buttons.btn-sm-inline .wp-block-button__link{
+  flex-direction: row;
+  align-items: flex-start;
+}
+@media (min-width: 768px) {
+	.editor-styles-wrapper .wp-block-buttons.btn-sm-inline .wp-block-button__link{
+		flex-direction: row;
+	}
+}
+
+.editor-styles-wrapper .wp-block-buttons .wp-block-button.btn-primary .wp-block-button__link {
+  color: var(--color-black);
+  background: var(--color-gray);
+  border: 1px solid var(--color-gray);
+}
+.editor-styles-wrapper .wp-block-buttons .wp-block-button.btn-primary .wp-block-button__link:hover {
+  color: var(--color-gray);
+  background: transparent;
+  border: 1px solid var(--color-gray);
+}
+.editor-styles-wrapper .wp-block-buttons .wp-block-button.btn-primary-tp .wp-block-button__link {
+  color: var(--color-gray);
+  background: transparent;
+  border: 1px solid var(--color-gray);
+}
+.editor-styles-wrapper .wp-block-buttons .wp-block-button.btn-primary-tp .wp-block-button__link:hover {
+  color: var(--color-black);
+  background: var(--color-gray);
+  border: 1px solid var(--color-gray);
+}
+.editor-styles-wrapper .wp-block-buttons .wp-block-button.btn-secondary .wp-block-button__link {
+  color: var(--color-gray);
+  background: transparent;
+  border: 1px solid var(--color-gray);
+}
+.editor-styles-wrapper .wp-block-buttons .wp-block-button.btn-secondary .wp-block-button__link:hover {
+  color: var(--color-black);
+  background: var(--color-gray);
+  border: 1px solid var(--color-gray);
+}
+.editor-styles-wrapper .wp-block-buttons .wp-block-button.btn-link .wp-block-button__link {
+  color: var(--color-gray);
+  font-size: 16px;
+  line-height: 23px;
+  letter-spacing: 0px;
+  padding: 11px 0px;
+  line-height: 28px;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+iframe .mce-content-body.mceContentBody,
+iframe .mce-content-body.mceContentBody p,
+iframe .mce-content-body.mceContentBody * {
+ color: #000 !important;
+}

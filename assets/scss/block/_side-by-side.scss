@@ -1,0 +1,55 @@
+/*-------------------
+  Side BY Side Content
+---------------------*/
+
+.stdl-section-content-img {
+    padding: 80px 0;
+    .stdl-content-full-img {
+        display: grid;
+        gap: 40px;
+        align-items: center;
+        @include breakpoint(md) {
+            gap: 80px;
+            grid-template-columns: 1fr 1fr;
+        }
+        .section-btn-warp {
+            margin-top: 40px;
+        }
+        .stdl-content__text *{
+            font-family: var(--font-primary);
+            font-size: 16px;
+            line-height: 23px;
+            font-weight: 300;
+            text-align: left;
+            color: var(--color-white);
+        }
+        .stdl-content__text {
+            strong{
+                font-weight: 500;
+            }
+        }
+        &.stdl-content--right {
+            .stdl-content {
+                order: 2;
+            }
+            .stdl-content__img {
+                order: 1; 
+            }
+        }
+        &.stdl-content--left {
+            .stdl-content {
+                order: 2; 
+                @include breakpoint(md) {
+                    order: 1; 
+                }
+            }
+            .stdl-content__img {
+                order: 1; 
+                @include breakpoint(md) {
+                    order: 2; 
+                }
+               
+            }
+        }
+    }
+}

@@ -1,0 +1,395 @@
+/*-------------------
+  Faq style
+---------------------*/
+
+.stdl-section-faq {
+    padding: 60px 0 60px;
+    .stdl-faq__content {
+        display: grid;
+        gap: 40px;
+        align-items: normal;
+        @include breakpoint(md) {
+            gap: 80px;
+        }
+        .stdl-content__details {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 0 60px 60px 0;
+        }
+        .stdl-contact__desc *{
+            font-size: 16px;
+            line-height: 23px;
+            font-weight: 300;
+            text-align: left;
+            color: var(--color-white);
+        }
+        .block_link {
+            color: var(--color-white);
+        }
+        .stdl-contact__desc {
+            strong{
+                font-weight: 600;
+            }
+        }
+        &.stdl-faq--right {
+            grid-template-columns: 1fr 1fr;
+            .stdl-content__details {
+                order: 2;
+            }
+            .stdl-content__faq {
+                order: 1; 
+            }
+        }
+        &.stdl-faq--left {
+            grid-template-columns: 1fr 1fr;
+            .stdl-content__details {
+                order: 1;
+            }
+            .stdl-content__faq {
+                order: 2; 
+            }
+        }
+        &.stdl-faq--full {
+            .stdl-content__details {
+                padding-bottom: 0;
+            }
+        }
+        ul {
+            list-style: disc;
+            padding-left: 30px;
+        }
+        ol {
+            list-style: auto; 
+            padding-left: 30px;
+        }
+        b,
+        strong {
+            font-weight: 600;
+        }
+    }
+    @include breakpoint(md) {
+        padding: 100px 0;
+    }
+    &.stdl-font-sm {
+        .stdl-faq__content {
+            @include breakpoint(md) {
+                gap: 40px;
+            }
+            .stdl-faq-item {
+                .block_title {
+                    @include breakpoint(md) {
+                        font-size: 18px;
+                        line-height: 34px;
+                    }
+                }
+                .stdl-faq-item__content {
+                    *{
+                        @include breakpoint(md) {
+                        font-size: 14px;
+                        line-height: 23px;
+                        }
+                    }
+                    a {
+                        color: var(--color-white);
+                        text-decoration: underline;
+                        transition: all 0.3s ease-in-out;
+                        &:hover {
+                            color: inherit;
+                        }
+                    }
+                    p:first-child {
+                        margin-top: 0;
+                    }
+                    ul {
+                        list-style: disc;
+                        padding-left: 30px;
+                    }
+                    ol {
+                        list-style: auto; 
+                        padding-left: 30px;
+                    }
+                    b,
+                    strong {
+                        font-weight: 600;
+                    }
+                    h1,h2,h3,h4,h5,h6 {
+                        font-family: var(--font-primary);
+                        color: var(--color-gray);
+                        font-size: 23px;
+                        font-weight: 300;
+                    }
+                    h1 {
+                        font-size: 38px;
+                        padding-bottom: 20px;
+                        margin-bottom: 0;
+                    } 
+                    h2 {
+                        font-size: 30px;
+                    } 
+                    h3 {
+                        font-size: 24px;
+              
+                    } 
+                    h4 {
+                        font-size: 18px;
+            
+                    }  
+                    h5 {
+                        font-size: 23px;
+                    } 
+                    h6 {
+                        font-size: 23px;
+                    }
+                }
+                &:last-child{
+                    margin-bottom: 0;
+                }
+            }     
+        }
+        @include breakpoint(md) {
+            padding: 40px 0;
+        }
+    }
+}
+
+.stdl-content__faq {
+    .stdl-faq-item {
+        transition: all .3s cubic-bezier(.23,1,.32,1);
+        margin-bottom: 40px;
+        .stdl-faq-item__title {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            cursor: pointer;
+            .block_title {
+                font-size: 18px;
+                line-height: 23px;
+                @include breakpoint(md) {
+                   font-size: 30px;
+                   line-height: 34px;
+                }
+            }
+            span {
+                line-height: 1;
+                margin-top: 5px;
+            }
+            svg {
+                transition: all .3s cubic-bezier(.23,1,.32,1);
+                stroke: var(--color-light-gray);
+                transform: rotate(180deg);
+            }
+            &.active {
+                svg {
+                    transform: rotate(0deg);
+                    stroke: var(--color-gray);
+                }
+            }
+            @include breakpoint(md) {
+                align-items: flex-start;
+            }
+        } 
+        .stdl-faq-item__content {
+            display: none;
+            padding-right: 20px;
+            // transition: all .3s ease-in-out;
+            *{
+                font-size: 14px;
+                line-height: 21px;
+                font-weight: 300;
+                text-align: left;
+                color: var(--color-gray);
+                @include breakpoint(md) {
+                   font-size: 18px;
+                    line-height: 23px;
+                }
+                
+            }
+            &.active {
+                display: block;
+          
+            }
+            @include breakpoint(md) {
+                padding-right: 60px;
+            }
+            a {
+                color: var(--color-white);
+                text-decoration: underline;
+                transition: all 0.3s ease-in-out;
+                &:hover {
+                    color: inherit;
+                }
+            }
+            ul {
+                list-style: disc;
+                padding-left: 30px;
+            }
+            ol {
+                list-style: auto; 
+                padding-left: 30px;
+            }
+            b,
+            strong {
+                font-weight: 600;
+            }
+            h1,h2,h3,h4,h5,h6 {
+                font-family: var(--font-primary);
+                color: var(--color-gray);
+                font-size: 23px;
+                font-weight: 300;
+            }
+            h1 {
+                font-size: 38px;
+                padding-bottom: 20px;
+                margin-bottom: 0;
+            } 
+            h2 {
+                font-size: 30px;
+            } 
+            h3 {
+                font-size: 24px;
+      
+            } 
+            h4 {
+                font-size: 18px;
+    
+            }  
+            h5 {
+                font-size: 23px;
+            } 
+            h6 {
+                font-size: 23px;
+            }
+        }
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+}
+
+// For Contact Page
+.stdl-page-contact {
+    .stdl-section-faq {
+        padding: 150px 0 20px;
+        @include breakpoint(md) {
+            padding: 100px 0;
+        }
+        .stdl-faq__content { 
+            &.stdl-faq--full{
+                gap: 40px;
+                @include breakpoint(md) {
+                    gap: 120px
+                }
+            }
+           
+        }
+    }
+}
+
+.style-faq-style_box {
+    .stdl-faq__content {
+        @include breakpoint(md) {
+            gap: 40px;
+        }
+        .stdl-faq-item {
+            margin-bottom: 10px;
+            padding: 15px 30px;
+            border-radius: 10px;
+            background: var(--color-dark-gray);
+            border: 1px solid hsla(0,0%,45%,.3607843137);
+            transition: all 0.2s ease-in-out !important;
+            .stdl-faq-item__title{
+                border: none;
+            }
+            .block_title {
+                margin-bottom: 0;
+                font-size: 16px;
+                line-height: 23px;
+                @include breakpoint(md) {
+                    font-size: 18px;
+                    line-height: 34px;
+                }
+            }
+            .stdl-faq-item__content {
+                border: none;
+                padding-top: 10px;
+                // padding: 20px 30px;
+                // border-radius: 0 0 10px 10px;
+                // background: var(--color-dark-gray);
+                *{
+                    @include breakpoint(md) {
+                        font-size: 16px;
+                        line-height: 23px;
+                    }
+                }
+                p:first-child {
+                    margin-top: 0;
+                }
+                a {
+                    color: var(--color-white);
+                    text-decoration: underline;
+                    transition: all 0.3s ease-in-out;
+                    &:hover {
+                        color: inherit;
+                    }
+                }
+                ul {
+                    list-style: disc;
+                    padding-left: 30px;
+                }
+                ol {
+                    list-style: auto; 
+                    padding-left: 30px;
+                }
+                b,
+                strong {
+                    font-weight: 600;
+                }
+                
+                h1,h2,h3,h4,h5,h6 {
+                    font-family: var(--font-primary);
+                    color: var(--color-gray);
+                    font-size: 23px;
+                    font-weight: 300;
+                }
+                h1 {
+                    font-size: 38px;
+                    padding-bottom: 20px;
+                    margin-bottom: 15px;       
+                } 
+                h2 {
+                    font-size: 30px;
+                } 
+                h3 {
+                    font-size: 24px;
+          
+                } 
+                h4 {
+                    font-size: 18px;
+                }  
+                h5 {
+                    font-size: 23px;
+                } 
+                h6 {
+                    font-size: 23px;
+                }
+            }
+          
+            &.active {
+                background: var(--color-dark-gray);
+                border: 1px solid hsla(0,0%,45%,.3607843137);
+                border-radius: 10px;
+                .stdl-faq-item__title.active{
+                    border: none;
+                    background: transparent;
+                }
+                .stdl-faq-item__content{
+                    padding-top: 10px;
+                }
+            }
+            @include breakpoint(md) {
+                padding: 15px 30px;
+            }
+        }     
+    }
+}

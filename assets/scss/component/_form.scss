@@ -1,0 +1,273 @@
+/*-------------------
+  Form Styles
+---------------------*/
+.gform_wrapper {
+    background: var( --color-dark-gray);
+    border-radius: 10px;
+        &.gravity-theme .gform_fields {
+            grid-row-gap: 8px;
+            textarea.medium {
+                height: 155px;
+            }
+        }
+        .gform_body{
+            .gfield {
+                position: relative;
+                .stdl-icon {
+                    position: absolute;
+                    top: 13px;
+                    left: 0;
+                    height: 18px;
+                    transform: translateY(0);
+                    svg path,
+                    svg {
+                        stroke: var(--color-light-gray);
+                    }
+                    @include breakpoint(md) {
+                        top: 9px;
+                    }
+                }
+                &.gfield--type-textarea{
+                    .stdl-icon {
+                        top: 9px;
+                    }
+                }
+            }
+            .gfield--type-fileupload .gfield_label,
+            input[type="text"],
+            input[type="email"],
+            input[type="url"],
+            input[type="password"],
+            input[type="search"],
+            input[type="number"],
+            input[type="tel"],
+            input[type="range"],
+            input[type="date"],
+            input[type="month"],
+            input[type="week"],
+            input[type="time"],
+            input[type="datetime"],
+            input[type="datetime-local"],
+            input[type="color"],
+            textarea {
+                font-family: var(--font-primary);
+                font-size: 16px;
+                line-height: 23px;
+                color: var(--color-light-gray);
+                padding: 12px 25px 12px 30px;
+                border: none;
+                border-bottom: 1px solid var(--color-light-gray);
+                border-radius: 0px;
+                background: transparent;
+                transition: all 0.3s ease-in-out;
+            }
+            .gfield--type-fileupload .gfield_label{
+                font-weight: 300;
+                border-bottom: 1px solid transparent;
+            }
+        
+            input[type="text"]:focus,
+            input[type="email"]:focus,
+            input[type="url"]:focus,
+            input[type="password"]:focus,
+            input[type="search"]:focus,
+            input[type="number"]:focus,
+            input[type="tel"]:focus,
+            input[type="range"]:focus,
+            input[type="date"]:focus,
+            input[type="month"]:focus,
+            input[type="week"]:focus,
+            input[type="time"]:focus,
+            input[type="datetime"]:focus,
+            input[type="datetime-local"]:focus,
+            input[type="color"]:focus,
+            textarea:focus {
+                color: var(--color-white);
+                border-color: none;
+                border-bottom-color: var(--color-white);
+            }
+            .gfield:focus .ginput_container + .stdl-icon,
+            input[type="text"]:focus .ginput_container + .stdl-icon,
+            input[type="text"]:focus + .stdl-icon,
+            input[type="text"]:focus + .stdl-icon {
+                svg path,
+                svg {
+                    stroke: var(--color-white);
+                }
+            }
+            input:focus-visible,
+            textarea:focus-visible {
+                outline: 0 !important;
+            }
+            .gform-field-label{
+                &.gfield_label_before_complex {
+                    font-family: var(--font-primary);
+                    font-size: 16px;
+                    line-height: 23px;
+                    font-weight: 400;
+                    text-align: left;
+                    color: var(--color-white);
+                }
+            }
+            .ginput_preview_list .ginput_preview *,
+            .gform_drop_instructions,
+            .gfield_description.gform_fileupload_rules{
+                font-family: var(--font-primary);
+                font-size: 14px;
+                line-height: 23px;
+                font-weight: 400;
+                text-align: center;
+                color: var(--color-gray);
+            }
+            button.button.gform_button_select_files {
+                text-align: center;
+                font-family: var(--font-primary);
+                font-size: 14px;
+                line-height: 1;
+                letter-spacing: 0px;
+                color: var(--color-black);
+                padding: 11px 20px;
+                background: var(--color-gray);
+                border-radius: 5px;
+                border: 1px solid var(--color-gray);
+                transition: all 0.3s ease-in-out;  
+                &:hover {
+                    color: var(--color-gray);
+                    background: transparent;
+                    border: 1px solid var(--color-gray);
+                }
+            }
+            .gform_delete_file {
+                span {
+                    &::before {
+                        font-family: 'dashicons';
+                    }
+                }
+            }
+            .field_description_above .gfield_description
+            .gform_drop_instructions {
+                font-size: 18px;
+            }
+            .gfield_checkbox {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap:6px;
+                @include breakpoint(md) {
+                    grid-template-columns: repeat(3, 1fr);
+                    gap:11px;
+                }
+                .gfield-choice-input[type="checkbox"] {
+                    display: none;
+                    visibility: hidden;
+                }
+                label.gform-field-label {
+                    cursor: pointer;
+                    display: inline-block;
+                    text-align: center;
+                    width: 130px;
+                    height: 28px;
+                    letter-spacing: 0px;
+                    color: var(--color-dark-gray);
+                    font-family: var(--font-primary);
+                    font-size: 14px;
+                    line-height: 1.8;
+                    background: var(--color-light-gray);
+                    border: 1px solid var(--color-light-gray);
+                    border-radius: 20px;
+                    transition: all 0.3s ease-in-out;
+                    @include breakpoint(md) {
+                        width: 145px;
+                        font-size: 15px;
+                        line-height: 1.8;
+                    }
+                    &:hover {
+                        border-color: var(--color-white);
+                    }
+                }
+
+               .gfield-choice-input+label {
+                    max-width: calc(100% - 0px) !important;
+               }
+               .gfield-choice-input:checked + label {
+                    background-color: var(--color-white);
+                }
+            }
+            .gform_fields {
+                .gfield.gfield--type-checkbox:first-child {
+                    margin-bottom: 20px;
+                } 
+                .gfield.gfield--type-checkbox:first-child + .gfield.gfield--type-checkbox {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+
+       
+        .gform_footer {
+            input.gform_button{
+                text-align: center;
+                font-family: var(--font-primary);
+                font-size: 15px;
+                line-height: 1;
+                letter-spacing: 0px;
+                color: var(--color-black);
+                padding: 14px 25px;
+                width: 100%;
+                background: var(--color-gray);
+                border-radius: 5px;
+                border: 1px solid var(--color-gray);
+                transition: all 0.3s ease-in-out;
+            }
+            button:hover,
+            input[type="button"]:hover,
+            input[type="reset"]:hover,
+            input[type="submit"]:hover {
+                color: var(--color-gray);
+                background: transparent;
+                border: 1px solid var(--color-gray);
+            }
+        
+            button:active,
+            button:focus,
+            input[type="button"]:active,
+            input[type="button"]:focus,
+            input[type="reset"]:active,
+            input[type="reset"]:focus,
+            input[type="submit"]:active,
+            input[type="submit"]:focus {
+                border-color: #aaa #bbb #bbb;
+            }
+        }
+      
+    }
+  
+.gform_wrapper.gravity-theme {
+    .gfield_validation_message,
+    .validation_message,
+    .gform_validation_errors {
+        background: transparent;
+        border-color: var(--bgcolorThird);
+        color: var(--bgcolorThird);
+        border-radius: 10px;
+        .gform_submission_error {
+            color: var(--bgcolorThird);
+        }
+    }
+}
+body .gform_wrapper.gravity-theme .gfield_validation_message, 
+body .gform_wrapper.gravity-theme .gform_validation_errors, 
+body .gform_wrapper.gravity-theme .validation_message,
+body .gform_wrapper.gravity-theme .gform_validation_errors {
+    padding-top: 12px;
+    padding: 12px 12px;
+}
+#gform_wrapper_10,
+#gform_wrapper_8 {
+    position: relative;
+}
+
+.stdl-contact_gravity .gform_wrapper .gform_body #field_10_8 .ginput_container.ginput_container_text + .stdl-icon,
+.stdl-contact_gravity .gform_wrapper .gform_body #field_11_8 .ginput_container.ginput_container_text + .stdl-icon {
+    display: none;
+    visibility: hidden;
+}

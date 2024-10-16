@@ -1,0 +1,33 @@
+/*-------------------
+ * Svg Style
+---------------------*/
+.light_theme {
+    .site-branding {
+        a {
+            img {
+                filter: invert(100%);
+            }
+        }
+    }
+    .header__img {
+        svg {
+            filter: invert(100%);
+        }
+    }
+    .featured-logo-item {
+        img {
+            filter: invert(100%);
+        }
+    }
+    .vacancies-item__thumb {
+        svg {
+            filter: invert(100%);
+        }
+    }
+}
+
+.light_theme {
+    .stdl-cpt__meta li a {
+        color: #fff;
+    }
+}

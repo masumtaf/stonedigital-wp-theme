@@ -1,0 +1,16 @@
+/*-------------------
+ * Button
+---------------------*/
+.stdl-menu-wrapper {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    > li {
+        a {
+            color: var(--color-white);
+        }
+    }
+}

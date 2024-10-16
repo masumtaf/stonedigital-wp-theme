@@ -1,0 +1,195 @@
+/*-------------------
+  Client Feedback
+---------------------*/
+.stdl-section-client-fbk {
+    .container {
+        z-index: 103;
+    }
+    .section-header {
+        text-align: center;
+    }
+    .section-btn-warp {
+        padding-top: 40px;
+    }
+}
+.client-fbk {
+    padding-top: 40px;
+}
+
+.client-fbk-items {
+    &.stdl-grid-col-3 {
+        @include breakpoint(md) {
+            row-gap: 36px;
+        }
+    }
+    .client-fbk-item {
+        text-align: center;
+        &__body {
+            position: relative;
+            padding: 25px 20px 75px 20px;
+            background: var(--color-dark-gray);
+            border-radius: 10px;
+            text-align: center;
+            a.popup-action {
+                display: inline-block;
+                text-align: center;
+                margin-top: 20px;
+                font-size: 13px;
+                line-height: 24px;
+                color: var(--color-white);
+                border-bottom: 1px solid var(--color-light-gray);
+            }
+        }
+        &__text {
+            max-height: 200px;
+            overflow: hidden;
+            text-align: center;
+            p{
+                color: var(--color-white);
+                text-align: center;
+                font-size: 14px;
+                line-height: 23px;
+                font-weight: 400;
+                margin-bottom: 0;
+                a {
+                    color: var(--color-gray);
+                    transition: all 0.3s ease-in-out;
+                    &:hover {
+                        color: var(--color-white);
+                    }
+                }
+            }
+            @include breakpoint(md) {
+                padding: 35px 35px 75px 35px;
+            }
+        }
+        &__info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            margin-top: -50px;
+            position: relative;
+            z-index: 2;
+            span {
+                display: block;
+                color: var(--color-gray);
+                text-align: center;
+                font-size: 14px;
+                line-height: 21px;
+                font-weight: 400;
+                margin-bottom: 0;
+              
+                img {
+                    border-radius: 100%;
+                    max-width: 100px;
+                }
+            }
+            a {
+                span.client-company {
+                    text-decoration: underline;
+                }
+            }
+            .client-name {
+                margin-top: 20px;
+                font-size: 18px;
+                line-height: 21px;
+                font-weight: 400;
+                color: var(--color-white);
+                margin-bottom: 5px;
+            }
+        }
+       
+    }
+  
+}
+
+.text-truncate *{
+    display: -webkit-box;
+    -webkit-line-clamp: 4 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+}
+.client-fbk {
+    .stdl-popup-content {
+        position: relative;
+        .client-fbk-item__info {
+            .client-img {
+                display: block;
+                img {
+                    border-radius: 100%;
+                    max-width: 150px;
+                }
+            }
+            span {
+                display: block;
+                color: var(--color-gray);
+                text-align: center;
+                font-size: 14px;
+                line-height: 21px;
+                font-weight: 400;
+                margin-bottom: 0;
+                img {
+                    border-radius: 100%;
+                    max-width: 200px;
+                }
+            }
+            .client-name {
+                margin-top: 20px;
+                font-size: 18px;
+                line-height: 21px;
+                font-weight: 400;
+                color: var(--color-white);
+                margin-bottom: 5px;
+            }
+        }
+        .client-fbk-item__body * {
+            margin-top: 25px;
+            color: var(--color-white);
+            text-align: center;
+            font-size: 14px;
+            line-height: 23px;
+            font-weight: 400;
+            margin-bottom: 0;
+            a {
+                color: var(--color-gray);
+                transition: all 0.3s ease-in-out;
+                &:hover {
+                    color: var(--color-white);
+                }
+            }
+            @include breakpoint(md) {
+                font-size: 16px;
+                line-height: 23px; 
+            }
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            left: 12px;
+            top: 36px;
+            opacity: 1;
+            width: 30px;
+            height: 30px;
+            background-image: url(../img/quote-mark-2.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center bottom;
+            overflow: hidden;
+            z-index: 0;
+            filter: invert(.1);
+            @include breakpoint(md) {
+                width: 110px;
+                height: 110px;
+                left: 46px;
+                top: 46px;
+            }
+        }
+    }
+}
+
+.modal-opened .stdl-section-client-fbk .container {
+    z-index: auto;
+}

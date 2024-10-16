@@ -1,0 +1,124 @@
+/*-------------------
+  Team Hobbies Styles
+---------------------*/
+.stdl-section-team-hobbies {
+
+}
+.team-hobbies {
+    @include breakpoint(md) {
+        &.stdl-grid-col-2 {
+            gap: 80px;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+        }
+    }
+    @include breakpoint(lg) {
+        grid-template-columns: 1fr 1.5fr;
+    }
+}
+
+.team-hobbies-lists {
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 40px;
+}
+
+.hobbies-list {
+    h4 {
+        color: var(--color-white);
+        text-align: left;
+        font-size: 18px;
+        line-height: 21px;
+        margin-bottom: 0;
+        font-weight: 300;
+        margin-bottom: 12px; 
+    }
+}
+.hobbies-list-wrap {
+    margin-top: 10px;
+    ul {
+        padding: 0;
+        margin: 0;
+        display: inline-flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        li {
+            color: var(--color-gray);
+            font-size: 16px;
+            line-height: 23px;
+            margin-bottom: 0;
+            font-weight: 300;
+            margin-top: 0;
+        }
+    }
+}
+
+.stdl-hobbies-gallery {
+    // position: relative;
+    // margin: 0 auto;
+    // max-width: 450px;
+    // min-height: 363px;
+    // @media (min-width: 400px){
+    //     min-height: 470px;
+    // }
+    // @include breakpoint(md) {
+    //     min-height: 550px;
+    // }
+}
+
+.stdl-hobbies-gallery__item {
+    // position: absolute;
+    // top: 0%;
+    // left: 0%;
+    // width: 100%;
+    // height: auto;
+    // transform-origin: center;
+    // transition: transform 0.3s ease;
+    // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.stdl-hobbies-gallery__item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.team-hobbies {
+    position: relative;
+}
+.team-hobbies_gallery {
+    width: 250px;
+    height: 350px;
+    @include breakpoint(md) {
+        width: 290px;
+        height: 450px;
+    }  
+    @include breakpoint(lg) {
+        width: 370px;
+    } 
+    @include breakpoint(xxl) {
+        width: 470px;
+    }
+  }
+  
+  .team-hobbies_gallery .swiper-slide {
+    position: relative;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    user-select: none;
+  }
+  
+  .team-hobbies_gallery .swiper-slide img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .img-position {
+    object-position: 50% 0%;
+  }
+  

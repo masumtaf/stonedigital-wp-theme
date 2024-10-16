@@ -1,0 +1,222 @@
+/*-------------------
+  Service Box Styles
+---------------------*/
+
+.section-stdl-service {
+    padding: 60px 0 100px;
+ 
+    .section-header {
+        text-align: center;
+        max-width: 725px;
+        margin: 0 auto 40px;
+    }
+   
+}
+
+.service-items {
+    .service-item {
+        padding: 36px 25px;
+        background: var(--color-dark-gray) 0% 0% no-repeat padding-box;
+        border-radius: 10px;
+        &__header {
+            display: inline-flex;
+            gap: 14px;
+            align-items: center;
+            .header__img {
+                span {
+                    display: block;
+                    line-height: 1;
+                }
+            }
+            .header__title {
+                color: var(--color-white);
+                text-align: left;
+                font-size: 18px;
+                line-height: 28px;
+                margin-bottom: 0;
+                font-weight: 300;
+                @include breakpoint(md) {
+                    line-height: 24px;
+                }
+            }
+        }  
+        &__body {
+            padding-top: 10px;
+            color: var(--color-white);
+            text-align: left;
+            font-size: 14px;
+            line-height: 23px;
+            margin-bottom: 0;
+            a {
+                color: var(--color-gray);
+                text-decoration: underline;
+                transition: all 0.3s ease-in-out;
+                &:hover {
+                    color: inherit;
+                }
+            }
+            
+        }
+        @include breakpoint(md) {
+            padding: 36px 36px;
+        }
+    }
+    &.service-item--center_align {
+        .service-item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            &__header {
+                align-items: center;
+                flex-direction: column;
+                text-align: center;
+                .header__title {
+                    text-align: center;
+                }
+            }
+            &__body {
+                text-align: center;
+                p {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+.custom-icon-tile {
+    &.service-layout--left_align {
+        .service-item {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            flex-flow: wrap;
+            .service-item-test__header {
+                flex: 1 1 auto;
+            }
+            &__header {
+                .header__img {
+                    span {
+                        // max-height: 80px;
+                        // svg {
+                        //     max-width: 100%;
+                        // }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.service-item-bg-default-dark-gray .article-item,
+.service-item-bg-default-dark-gray {
+
+}
+
+.service-item-bg-gradient-one {
+    .service-item {
+        background: linear-gradient(180deg, var(--bg-grad-one) 0%, var(--bg-grad-two) 100%), var( --color-dark-gray) !important;
+    }
+}
+.service-item-bg-gradient-two {
+    .service-item {
+        background: linear-gradient(180deg, var(--bg-grad-one) 0%, var(--bg-grad-three) 100%);
+    }
+}
+
+.service-item-bg-gradient-three {
+    .service-item {
+        background: linear-gradient(180deg, var(--bg-grad-four) 0%, var(--bg-grad-five) 100%), linear-gradient(180deg, var(--bg-grad-one) 0%, var(--bg-grad-three) 100%);
+    }
+}
+
+.service-item-bg-gradient-four {
+    .service-item {
+        background: linear-gradient(180deg, var(--bg-grad-six) 0%, var(--bg-grad-seven) 100%);
+    
+    }
+}
+
+.service-item-bg-gradient-five {
+    .service-item {
+        background: linear-gradient(180deg, var(--bg-grad-one) 0%, var(--bg-grad-three) 100%), var(--color-dark-gray);
+    }
+}
+
+.stdl-section-archive-services {
+    .stdl-services {
+        .article-wrapper {
+            &.service-item-bg-gradient-one {
+                .article-item {
+                    background: linear-gradient(180deg, var(--bg-grad-one) 0%, var(--bg-grad-two) 100%), var( --color-dark-gray) !important;
+                }
+            }
+            &.service-item-bg-gradient-two {
+                .article-item {
+                    background: linear-gradient(180deg, var(--bg-grad-one) 0%, var(--bg-grad-three) 100%);
+                }
+            }
+            
+            &.service-item-bg-gradient-three {
+                .article-item {
+                    background: linear-gradient(180deg, var(--bg-grad-four) 0%, var(--bg-grad-five) 100%), linear-gradient(180deg, var(--bg-grad-one) 0%, var(--bg-grad-three) 100%);
+                }
+            }
+            
+            &.service-item-bg-gradient-four {
+                .article-item {
+                    background: linear-gradient(180deg, var(--bg-grad-six) 0%, var(--bg-grad-seven) 100%);
+                
+                }
+            }
+            
+            &.service-item-bg-gradient-five {
+                .article-item {
+                    background: linear-gradient(180deg, var(--bg-grad-one) 0%, var(--bg-grad-three) 100%), var(--color-dark-gray);
+                }
+            }
+        }
+    }
+}
+
+
+.stdl-row-services-list {
+    .section-stdl-service {
+        padding: 0px 0 0px;
+        .service-items  {
+            grid-template-columns: 1fr !important;
+        }
+    }
+    
+    &.service-item-bg-gradient-one {
+        .service-item {
+            background: linear-gradient(180deg, var(--bg-grad-one) 0%, var(--bg-grad-two) 100%), var( --color-dark-gray) !important;
+        }
+    }
+    &.service-item-bg-gradient-two {
+        .service-item {
+            background: linear-gradient(180deg, var(--bg-grad-one) 0%, var(--bg-grad-three) 100%);
+        }
+    }
+
+    &.service-item-bg-gradient-three {
+        .service-item {
+            background: linear-gradient(180deg, var(--bg-grad-four) 0%, var(--bg-grad-five) 100%), linear-gradient(180deg, var(--bg-grad-one) 0%, var(--bg-grad-three) 100%);
+        }
+    }
+
+    &.service-item-bg-gradient-four {
+        .service-item {
+            background: linear-gradient(180deg, var(--bg-grad-six) 0%, var(--bg-grad-seven) 100%);
+        
+        }
+    }
+
+    &.service-item-bg-gradient-five {
+        .service-item {
+            background: linear-gradient(180deg, var(--bg-grad-one) 0%, var(--bg-grad-three) 100%), var(--color-dark-gray);
+        }
+    }
+
+}

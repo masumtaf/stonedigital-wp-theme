@@ -1,0 +1,111 @@
+/*-------------------
+  Post Block Styles
+---------------------*/
+.stdl-section-post-content {
+    position: relative;
+    padding: 60px 0;
+    // background: var(--color-dark);
+    background: linear-gradient(0deg, rgba(17,17,17,0.9), rgba(17,17,17,0.9)),url(../img/blur-pattern.png);
+    position: relative;
+    overflow: hidden;
+
+    @include breakpoint(md) {
+        padding: 80px 0;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: auto;
+        right: 20%;
+        text-align: center;
+        background: #5f7d95;
+        opacity: 0.7;
+        -webkit-filter: blur(170px);
+        filter: blur(170px);
+        width: 640px;
+        height: 410px;
+        z-index: 0;
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        -webkit-transform: translate3d(0, 0, 0);
+        -moz-transform: translate3d(0, 0, 0);
+        -webkit-animation: bgcolor-change-3x 9s linear infinite normal;
+        animation: bgcolor-change-3x 9s linear infinite normal;
+    }
+    .stdl-section__title {
+        margin-bottom: 40px;
+        .stdl-description {
+            margin: 0 auto;
+            @include breakpoint(md) {
+                max-width: 70%;
+            }
+        }
+
+    }
+}
+.owl-carousel .owl-stage{display: flex;}
+.stdl-post-item {
+    background: var(--color-black) 0% 0% no-repeat padding-box;
+    border-radius: 10px;
+    height: 100%;
+    flex-direction: column;
+    display: flex;
+    flex: 1 0 auto;
+    .stdl-post__thumb{
+        img {
+            border-radius: 10px 10px 0px 0px;
+        }
+        a.placeholder-img {
+            width: 100%;
+            img {
+                max-height: 233px;
+                object-fit: cover;
+            }
+        }
+    } 
+    
+   .stdl-post__content{
+        padding: 30px 36px 15px;
+        border-bottom: 1px solid #222;
+        -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+        flex: 1 1 auto;
+        .title {
+            font-size: 18px;
+            line-height: 21px;
+            font-weight: 300;
+            color: var(--color-white);
+        }
+        .desc {
+            font-size: 13px;
+            line-height: 23px;
+            font-weight: 300;
+            color: var(--color-white);
+        }
+    } 
+
+    .stdl-post__footer{
+        padding: 15px 36px 15px;
+        > div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        span {
+            color: var(--color-gray);
+            font-size: 13px;
+            line-height: 23px;
+            font-weight: 300;
+            letter-spacing: 0px;
+            &.stdl-read-time {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+        }
+
+    } 
+  
+}

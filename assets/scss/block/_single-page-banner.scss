@@ -1,0 +1,130 @@
+/*-------------------
+  Single Page Banner Styles
+---------------------*/
+
+.stdl-single-page-banner {
+    padding: 50px 0;
+    margin-bottom: -1px;
+    @include breakpoint(md) {
+        padding: 0px 0;
+    }   
+
+    .banner-header-content {
+        display: grid;
+        gap: 100px;
+        @include breakpoint(md) {
+            padding: 40px 0;
+            gap:0px;
+            height: calc(100vh - 135px);
+        }  
+        @include breakpoint(lg) {
+            padding: 80px 0;
+            gap: 0px;
+            height: calc(100vh - 161px);
+        }
+        .banner-header{
+            max-width: 100%;
+            @include breakpoint(md) {
+                max-width: 80%;
+            }   
+            @include breakpoint(lg) {
+                max-width: 50%;
+            }
+            .stdl-tagline {
+                color: var(--color-gray);
+                line-height: 1;
+                margin-bottom: 20px;
+                a {
+                    color: var(--color-gray);
+                    line-height: 1;
+                    font-size: 13px;
+                    text-decoration: none;
+                    @include breakpoint(md) {
+                        font-size: 18px;
+                    }
+                }
+                @include breakpoint(md) {
+                    font-size: 18px;
+                    margin-bottom: 30px;
+                }
+            } 
+            .stdl-title {
+                color: var(--color-white);
+                font-size: 30px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 34px;
+                @include breakpoint(md) {
+                    font-size: 44px;
+                }
+            }
+        }
+        .banner-footer {
+            display: grid;
+            gap:5px;
+            align-items: center;
+            justify-content: start;
+            @include breakpoint(md) {
+                grid-template-columns: repeat(2, 1fr);
+                gap:36px;
+                align-items: end;
+                justify-content: start;
+            }
+            @include breakpoint(xl) {
+                gap:136px;
+            }
+            .section-banner-btn-warp {
+                order: 1;
+                text-align: left;
+                @include breakpoint(md) {
+                    order: 0;
+                }
+                .block_link {
+                    color: var(--color-white);
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 34px;
+                    padding-bottom: 0;
+                }
+            }
+            .banner-descriptions {
+                color: var(--color-white);
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 23px;
+                text-align: left;
+                order: 0;
+                @include breakpoint(lg) {
+                    text-align: left;
+                }
+                @include breakpoint(lg) {
+                    order: 2;
+                }
+                p {
+                    color: var(--color-white);
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 23px;
+                    text-align: left;
+                @include breakpoint(lg) {
+                    text-align: right;
+                }
+                    :last-child {
+                        margin-bottom: 0;
+                    }
+                }
+                a {
+                    color: var(--color-gray);
+                    text-decoration: underline;
+                    transition: all 0.3s ease-in-out;
+                    &:hover {
+                        color: inherit;
+                    }
+                }
+            }
+        }
+    }
+}

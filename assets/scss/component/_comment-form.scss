@@ -1,0 +1,174 @@
+/*-------------------
+ * Comment Form
+---------------------*/
+.stdl-comment-from {
+    margin: 60px 0;
+    padding: 36px;
+    border-radius: 10px;
+    background-color: var(--color-black);
+    p {
+        position: relative;
+        label {
+            display: none;
+            visibility: hidden;
+        }
+        &.comment-form-author{
+            margin-top: 35px;
+        }
+        &.comment-form-cookies-consent {
+            margin-top: 25px;
+            display: flex;
+            gap: 15px;
+            align-items: flex-start;
+            label{
+                display: block;
+                visibility: visible;
+            }
+        }
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="url"],
+    textarea {
+        width: 100%;
+        font-family: var(--font-primary);
+        font-size: 16px;
+        line-height: 23px;
+        color: var(--color-light-gray);
+        padding: 6px 25px 12px 30px;
+        border: none;
+        border-bottom: 1px solid var(--color-light-gray);
+        border-radius: 0px;
+        background: transparent;
+        transition: all 0.3s ease-in-out;
+    }
+    textarea {
+        min-height: 150px 
+    }
+    .stdl-icon {
+        position: absolute;
+        top: 6px;
+        svg,  
+        svg path {
+            stroke: var(--color-light-gray);
+        }
+    }
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="url"]:focus,
+    textarea:focus {
+        color: var(--color-white);
+        border-color: none;
+        border-bottom-color: var(--color-white);
+    }
+    input:focus-visible,
+    textarea:focus-visible {
+        outline: 0 !important;
+    }
+
+    .form-submit {
+        margin-top: 35px;
+        text-align: left;
+        input[type="submit"] {
+            font-family: var(--font-primary);
+            font-size: 15px;
+            line-height: 1;
+            letter-spacing: 0;
+            color: var(--color-black);
+            padding: 14px 45px;
+            width: auto;
+            background: var(--color-gray);
+            border-radius: 5px;
+            border: 1px solid var(--color-gray);
+            transition: all .3s ease-in-out;
+            &:hover {
+                color: var(--color-gray);
+                background: transparent;
+                border: 1px solid var(--color-gray);
+            }
+        }
+    }
+}
+
+.stdl-comment-from {
+    .commentlist {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        .comment {
+            .comment-body {
+                padding: 15px 30px;
+                border-radius: 10px;
+                background: var(--color-dark-gray);
+                border: 1px solid hsla(0,0%,45%,.3607843137);
+                transition: all .2s ease-in-out!important;
+                .comment-author {
+                    img {
+                        border-radius: 100%;
+                        margin-right: 10px;
+                    }
+                    b,
+                    a,
+                    span {
+                        font-size: 13px;
+                        line-height: 23px;
+                        color: var(--color-gray);
+                        font-weight: 400;
+                    }
+                }
+                .comment-metadata {
+                    margin-left: 46px;
+                    margin-top: -8px;
+                    font-size: 13px;
+                    line-height: 23px;
+                    color: var(--color-gray);
+                    font-weight: 400;
+                    a ,
+                    span {
+                        font-size: 13px;
+                        line-height: 23px;
+                        color: var(--color-gray);
+                        font-weight: 400;
+                    }
+                }
+                .comment-content {
+                    * {
+                        margin-top: 15px;
+                        color: var(--color-white);
+                        text-align: left;
+                        font-size: 14px;
+                        line-height: 23px;
+                        margin-bottom: 0;
+                    }
+                 
+                }
+                .reply {
+                    text-align: right;
+                    margin-top: 15px;
+                    color: var(--color-white);
+                    font-size: 14px;
+                    line-height: 23px;
+                    margin-bottom: 0;
+                }
+            }
+        }
+        ol,ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            li {
+                &::before {
+                    content: unset;
+                }
+            }
+        }
+        > li {
+            padding-left: 0;
+        }
+          
+    }
+    .comment-respond {
+        margin-top: 35px;
+    }
+}

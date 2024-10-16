@@ -1,0 +1,174 @@
+/*-------------------------
+    Variables
+-------------------------*/
+:root {
+        //Themes colors
+  
+    --border-width: 2px;
+    --radius-small: 4px;
+    --radius: 10px;
+    --radius-big: 16px;
+    --p-light: 300;
+    --p-regular: 400;
+    --p-medium: 500;
+    --p-semi-bold: 600;
+    --p-bold: 700;
+    --p-extra-bold: 800;
+    --transition: 0.3s;
+    --transition-2: 0.5s;
+    --transition-transform: transform .65s cubic-bezier(.23,1,.32,1);
+
+    // Heading Font 
+    --font-primary: "DM Sans", sans-serif;
+    --font-secondary: "DM Sans", sans-serif;
+    --font-size-b1: 16px;
+    --font-size-b2: 15px;
+    --line-height-b1: 23px;
+    --line-height-b2: 1.85;
+    --h1: 50px;
+    --h2: 38px;
+    --h3: 35px;
+    --h4: 32px;
+    --h5: 24px;
+    --h6: 18px;
+    --h1-lineHeight: 1.2;
+    --h2-lineHeight: 1.39;
+    --h3-lineHeight: 1.43;
+    --h4-lineHeight: 1.4;
+    --h5-lineHeight: 1.45;
+    --h6-lineHeight: 1.62;
+    --color-body: #18181B;
+    --bgcolorStart: #10a3a8;
+    --bgcolorSecond: #7c32db;
+    --bgcolorThird: #891C53;
+
+}
+
+.dark_theme {
+    --color-white: #ffffff;
+    --color-black: #000000;
+    --color-dark: #18181B;
+    --color-dark-gray: #27272A;
+    --color-light-gray: #5C5C62;
+    --color-lighten01: #E9EFEE;
+    --color-blog-heading: #E9EFEE;
+    --color-gray: #C1C1C1;
+    --color-v2-text: #EDEDED;
+    --bg-grad-one: #353934;
+    --bg-grad-two: #0f1310;
+    --bg-grad-three: #0F1310;
+    --bg-grad-four: #001b534d;
+    --bg-grad-five: #0304184d;
+    --bg-grad-six: rgba(0, 27, 83, 0.50) ;
+    --bg-grad-seven: rgba(3, 4, 24, 0.50);
+}
+
+.light_theme {
+    --color-white: #000;
+    --color-black: #ffff;
+    --color-dark: #f8f8f8;
+    --color-dark-gray: #eeeeee;
+    --color-light-gray: #5C5C62;
+    --color-lighten01: #E9EFEE;
+    --color-blog-heading: #27272A;
+    --color-gray: #27272A;
+    --color-v2-text: #000;
+    --bg-grad-one: #cac6cb;
+    --bg-grad-two: #f0ecef;
+    --bg-grad-three: #f0ecef;
+    --bg-grad-four: #e4adb2;
+    --bg-grad-five: #fbe7b2;
+    --bg-grad-six: rgba(0, 27, 83, 0.50);
+    --bg-grad-seven: rgba(3, 4, 24, 0.50);
+}
+
+
+
+.editor-styles-wrapper {
+    /* :root elements */
+    :root {
+        --color-white: #ffffff;
+        --color-black: #000000;
+        --color-dark: #18181B;
+        --color-dark-gray: #27272A;
+        --color-light-gray: #5C5C62;
+        --color-lighten01: #E9EFEE;
+        --color-gray: #C1C1C1;
+    }
+}
+
+
+// Layouts Variation
+$custom-lg-device-seven: 'only screen and (min-width: 1200px)';
+$custom-lg-device-three: 'only screen and (min-width: 1750px)';
+$custom-lg-device-four: 'only screen and (min-width: 1800px)';
+$custom-lg-device-five: 'only screen and (min-width: 1900px)';
+
+$custom-lg-device-two: 'only screen and (min-width: 1401px) and (max-width: 1750px)';
+$custom-lg-device-six: 'only screen and (min-width: 1401px) and (max-width: 1650px)';
+$custom-lg-device-eight: 'only screen and (min-width: 1200px) and (max-width: 1450px)';
+
+$laptop-device: 'only screen and (min-width: 1200px) and (max-width: 1599px)';
+$custom-laptop-device: 'only screen and (min-width: 1200px) and (max-width: 1400px)';
+
+$extra-device: 'only screen and (min-width: 1600px) and (max-width: 1919px)';
+$lg-layout: 'only screen and (min-width: 992px) and (max-width: 1199px)';
+$md-layout:'only screen and (min-width: 768px) and (max-width: 991px)';
+$md-above:'only screen and (min-width: 768px)';
+$lg-above:'only screen and (min-width: 992px)';
+$xl-above:'only screen and (min-width: 1200px)';
+$xxl-above:'only screen and (min-width: 1200px)';
+
+$lg-layout-1:'only screen and (max-width: 1650px)';
+$smlg-device: 'only screen and (max-width: 1199px)';
+$md-layout-1:'only screen and (max-width: 991px)';
+$sm-layout:'only screen and (max-width: 767px)';
+$large-mobile: 'only screen and (max-width: 575px)';
+$small-mobile: 'only screen and (max-width: 479px)';
+
+/// Responsive
+@mixin breakpoint($point) {
+    @if $point==xxxl {
+        @media (min-width: 1920px) {
+            @content;
+        }
+    }
+    @else if $point==xxl {
+        @media (min-width: 1640px) {
+            @content;
+        }
+    }
+    @else if $point==xl {
+        @media (min-width: 1200px) {
+            @content;
+        }
+    }
+    @else if $point==lg {
+        @media (min-width: 992px) {
+            @content;
+        }
+    }
+    @else if $point==md {
+        @media (min-width: 768px) {
+            @content;
+        }
+    }
+    @else if $point==sm {
+        @media (min-width: 576px) {
+            @content;
+        }
+    }
+    @else if $point==xs {
+        @media (min-width: 0px) {
+            @content;
+        }
+    }
+}
+
+// @mixin gridgap($point) {
+//     gap: $point;
+//     @include breakpoint(md) {
+//         gap: $point !important;
+//     }
+// }
+

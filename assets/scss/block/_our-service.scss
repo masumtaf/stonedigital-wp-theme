@@ -1,0 +1,21 @@
+/*-------------------
+  Our Services Styles
+---------------------*/
+.stdl-section-our-services {
+    position: relative;
+    .stdl-grid-col-2 {
+        gap: 20px;
+    }
+    .service-items {
+        .service-item {
+            background-color: var(--color-dark);
+        }
+    }
+    &.stdl-bg-light-dark {
+        .service-items {
+            .service-item {
+                background: var(--color-dark-gray) !important;
+            }
+        }
+    }
+}

@@ -1,0 +1,34 @@
+/*-------------------
+ * Counter
+---------------------*/
+
+.stdl-counter {
+    padding: 20px 20px 20px 0;
+    border-bottom: 1px solid var(--color-light-gray);
+    margin-right: 30px;
+    .block_title {
+        font-size: 45px;
+        line-height: 64px;
+        font-weight: 400;
+        text-align: left;
+        color: var(--color-white);
+        @include breakpoint(md) {
+            font-size: 71px;
+            line-height: 92px;
+        }
+    }
+    .block_decs {
+        font-size: 18px;
+        line-height: 34px;
+        color: var(--color-gray);
+    }
+    &:last-child {
+        @include breakpoint(md) {
+            border-bottom: 1px solid transparent;
+        }
+    }
+
+}
+.stdl-counter_wrap .stdl-counter:first-child {
+    margin-top: -20px;
+}

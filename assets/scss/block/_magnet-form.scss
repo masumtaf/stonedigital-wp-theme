@@ -1,0 +1,218 @@
+/*-------------------
+  Magnet Fomr Styles
+---------------------*/
+
+.section-magnet-form {
+    position: relative;
+    z-index: 7;
+    .stdl-description{
+        p {
+            margin-bottom: 10px;
+            font-size: 16px;
+            line-height: 23px;
+            color: var(--color-white);
+            font-weight: 400;
+            a {
+                color: var(--color-gray);
+                text-decoration: underline;
+                transition: all 0.3s ease-in-out;
+                &:hover {
+                    color: inherit;
+                }
+            }
+        }
+        ol,
+        ul {
+            @extend %liststyle; 
+            padding: 20px 0;
+            li {
+                position: relative;
+                color: var(--color-white);
+                margin-top: 10px;
+                margin-bottom: 10px;
+                padding-left: 25px;
+                font-size: 16px;
+                line-height: 23px;
+                font-weight: 400;
+                a{
+                    color: var(--color-white);
+                }
+                ol,
+                ul {
+                    padding: 10px 0;
+                }  
+            }
+        }
+        ul {
+            li {
+                &::before{
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    right: auto;
+                    top: 8px;
+                    width: 6px;
+                    height: 6px;
+                    border-radius: 50%;
+                    background-color: var(--color-gray);
+                }  
+            }
+        }
+    }
+    .magnet-form {
+
+        .stdl-contact_gravity {
+            align-content: center;
+            align-items: center;
+            justify-content: center;
+            padding: 20px 20px;
+            margin-bottom: 0;
+            border-radius: 30px;
+            border: 3px solid #D4D4D4;
+            background: linear-gradient(180deg, #18181B 0%, #161616 100%);
+            background: transparent;
+            min-height: 289px;
+            .gform_wrapper {
+                background: transparent;
+                .gform_fields {
+                    .gfield_description {
+                        color: var(--color-white);
+                        font-family: "DM Sans";
+                        font-size: 14px;
+                        font-style: italic;
+                        font-weight: 400;
+                        line-height: 23px; /* 164.286% */
+                        opacity: 0.7;
+                    }
+                }
+                .gform_body .gfield .stdl-icon {
+                    top: 45px;
+                }   
+                .gform_body .gfield.stdl-name-field .stdl-icon {
+                    top: 12px;
+                }  
+                .gform_body .gfield.stdl-business-field .stdl-icon {
+                    top: 43px;
+                    &:first-child {
+                        visibility: hidden;
+                        display: none !important;
+                    }
+                }
+                .gform_body .gfield.stdl-business-field .stdl-icon:has(+ .stdl-icon) {
+                    visibility: hidden;
+                    display: none !important;
+                }
+                @include breakpoint(md) {
+                    .gform_body .gfield .stdl-icon {
+                        top: 41px;
+                    }   
+                    .gform_body .gfield.stdl-name-field .stdl-icon {
+                        top: 9px;
+                    }  
+                    .gform_body .gfield.stdl-business-field .stdl-icon {
+                        top: 39px;
+                        &:first-child {
+                            visibility: hidden;
+                            display: none !important;
+                        }
+                    }
+                    .gform_body .gfield_checkbox label.gform-field-label{
+                        color: var(--color-black);
+                        font-family: "DM Sans";
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 23px; /* 143.75% */
+                        padding: 12px 25px;
+                        border-radius: 230px;
+                        border: 1px solid rgba(0, 0, 0, 0.40);
+                        box-shadow: 0px 4px 49.7px 0px rgba(0, 0, 0, 0.05);
+                        height: 48px;
+                        white-space: nowrap;
+                    }
+                }
+            
+                .gform_page_footer {
+                    text-align: right;
+                    padding-bottom: 0;
+                    input[type="submit"],
+                    input[type="button"] {
+                        text-align: center;
+                        font-family: var(--font-primary);
+                        font-size: 14px;
+                        line-height: 1 !important;
+                        letter-spacing: 0;
+                        color: var(--color-dark);
+                        padding: 8px 15px;
+                        width: auto;
+                        background: var(--color-gray);
+                        border: 1px solid var(--color-gray);
+                        border-radius: 3px;
+                        width: 100%;
+                        max-width: 100px;
+                        text-align: center;
+                        white-space: nowrap;
+                        transition: all 0.3s ease-in-out;
+                        margin-bottom: 0;
+                        &:hover {
+                            color: var(--color-gray);
+                            background: transparent;
+                            border: 1px solid var(--color-gray);
+                        }
+                        @include breakpoint(lg) {
+                            border-radius: 5px;
+                            font-size: 15px;
+                            padding: 14px 25px;
+                            max-width: 167px;
+                        }
+                        &.gform_previous_button {
+                            background: transparent;
+                            border-color: transparent;
+                            color: var(--color-gray);
+                        }
+                    }
+                }
+            }
+            @include breakpoint(lg) {
+                padding: 48px 55px;
+            }
+        }
+        .gform_confirmation_message {
+            color: var(--color-white);
+            text-align: center;
+            font-family: "DM Sans";
+            font-size: 26px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 32px; /* 88.462% */
+        }
+    }
+    @include breakpoint(lg) {
+        .stdl-title {
+            font-size: 48px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 47px;
+        }   
+        .stdl-description {
+        
+        }
+    }
+}
+
+.stdl-magnet-form {
+    position: relative;
+    padding: 20px;
+    display: grid;
+    align-items: center;
+    gap: 56px;
+    border-radius: 10px;
+    background: radial-gradient(120.96% 60.36% at 4.01% 92.38%, #AC3D7F 0%, rgba(8, 8, 8, 0.00) 100%), linear-gradient(163deg, #1D1D20 62.54%, #101010 116.53%);
+    @include breakpoint(lg) {
+        padding: 40px 60px;
+        grid-template-columns: .6fr 1fr;
+        gap: 56px;
+    }
+  
+}
+

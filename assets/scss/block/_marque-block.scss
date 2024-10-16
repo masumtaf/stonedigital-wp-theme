@@ -1,0 +1,103 @@
+/*-------------------
+  Marque Block Styles
+---------------------*/
+@keyframes stdl-marque-text {
+  0% {
+      transform: translate(0,0);
+  }
+  100% {
+      transform: translate(-100%,0);
+  }
+}
+.stdl-section-marque {
+    position: relative;
+    width: 100%;
+    z-index: 7;
+    .stdl-marque-content {
+      position: relative;
+      display: -ms-grid;
+      display: grid;
+      grid-auto-columns: 1fr;
+      -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+      -ms-grid-rows: auto auto;
+      grid-template-rows: auto auto;
+      grid-column-gap: 30px;
+      background-attachment: scroll !important;
+    .stdl-marque-items{
+        -ms-grid-column: span 1;
+        grid-column-start: span 1;
+        -ms-grid-column-span: 1;
+        grid-column-end: span 1;
+        -ms-grid-row: span 1;
+        grid-row-start: span 1;
+        -ms-grid-row-span: 1;
+        grid-row-end: span 1;
+        width: 65%;
+        animation: 10s linear infinite stdl-marque-text;
+        will-change: transform;
+        white-space: nowrap;
+        @include breakpoint(md) {
+          animation: 35s linear infinite stdl-marque-text;
+        }
+        ul {
+            margin-bottom: 0px;
+            padding-left: 0px;
+            list-style-type: none;
+            li{
+                position: relative;
+                display: inline-block;
+                margin-left: 65px;
+                margin-right: 65px;
+                font-size: 110px;
+                line-height: 130px;
+                text-align: center;
+                letter-spacing: 2px;
+                font-weight: 400;
+                color: transparent;
+                -webkit-text-stroke: 1px var(--color-white);
+                a {
+                  -webkit-text-stroke: 1px var(--color-white);
+                  &:hover {
+                    -webkit-text-stroke: 1px var(--color-gray);
+                  }
+                }
+                &:nth-child(2n) {
+                    -webkit-text-stroke: 0px;
+                    color: var(--color-white);
+                    a {
+                      color: var(--color-white);
+                      text-decoration: none;
+                      transition: all 0.3s ease-in-out;
+                      &:hover {
+                        color: var(--color-gray);
+                      }
+                    }
+                }
+                &::before {
+                    position: absolute;
+                    content: '';
+                    left: -103px;
+                    height: 17px;
+                    width: 65px;
+                    border: 1px solid #fff;
+                    bottom: 17px;
+                }
+            }
+        }
+        &:hover {
+          animation-play-state: paused!important;
+        }
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .stdl-section-marque .stdl-marque-content .stdl-marque-items ul li{
+    font-size: 32px !important;
+    line-height: 54px !important;
+  }
+  .stdl-section-marque .stdl-marque-content .stdl-marque-items ul li:before{
+    height: 8px;
+  }
+}

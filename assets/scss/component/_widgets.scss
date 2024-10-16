@@ -1,0 +1,179 @@
+/*-------------------
+ * Widgets
+---------------------*/
+.search-widget-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+    @include breakpoint(md) {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    span.search-field{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 6px;
+
+        svg {
+            stroke: var(--color-gray);
+            max-width: 18px;
+        }
+        input[type=search] {
+            background: transparent;
+            border: none;
+            padding: 8px 10px 8px 6px;
+            color: var(--color-gray);
+            outline: none;
+            border-bottom: 1px solid transparent;
+            transition: all 0.3s ease-in-out;
+            &:focus {
+                outline: none;
+                border-bottom: 1px solid var(--color-gray);
+            }
+        }
+    }
+    .terms-widget {
+        width: 100%;
+        @include breakpoint(md) {
+            width: auto;
+        }
+    }
+    .stdl-custom-select{
+        width: 100%;
+        max-width: 100%;
+        position: relative;
+        
+        .select-btn {
+            display: flex;
+            height: 25px;
+            background: transparent;
+            padding: 10px 20px;
+            min-height: 25px;
+            font-size: 16px;
+            font-weight: 300;
+            align-items: center;
+            cursor: pointer;
+            justify-content: space-between;
+            color: var(--color-gray);
+            width: 100%;
+            span {
+                line-height: 1;
+                svg {
+                    line-height: 1;
+                    max-height: 18px;
+                    stroke: var(--color-gray)
+                }
+            }
+            @include breakpoint(md) {
+                width: 350px;
+            }
+           
+        }
+        .stdl-terms-wrapper {
+            position: absolute;
+            width: 100%;
+            overflow-y: auto;
+            max-height: 395px;
+            padding: 0px;
+            margin-top: 15px;
+            border-radius: 10px;
+            background: var(--color-dark);
+            display: none;
+            opacity: 0;
+            .stdl-terms-list {
+                @extend %liststyle;
+                width: 100%;
+                li {
+                    font-size: 14px;
+                    color: var(--color-gray);
+                    cursor: pointer;
+                    transition: all 0.2s ease-in-out;
+                    padding: 8px 12px;
+                    a {
+                        font-size: 14px;
+                        color: var(--color-gray);
+                    }
+                    &.active,
+                    &:hover {
+                       color: var(--color-white);
+                       background: var(--color-light-gray); 
+                       a{
+                        color: var(--color-white);
+                        background: var(--color-light-gray);
+                       }
+                    }
+                   
+                }
+            }
+            &.active{
+                display: block;
+                opacity: 1;
+                z-index: 10;
+            } 
+        }
+
+        &.active{
+            .stdl-terms-wrapper {
+                display: block;
+                opacity: 1;
+                box-shadow: 0 0 10px rgba(226, 226, 226, 0.09);
+                z-index: 10;
+            }
+        } 
+    }
+}
+
+.stdl-filterable-menu {
+    
+    @extend %liststyle;
+    display: flex;
+    width: 100%;
+    gap: 8px;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 0px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    @include breakpoint(md) {
+        position: absolute;
+        top: -46px;
+        left: 0;
+        gap: 25px;
+        padding-left: 20px;
+        top: -52px;
+        margin-bottom: 0px;
+    }
+    li {
+        color: var(--color-gray);
+        font-family: var(--font-primary);
+        font-size: 14px;
+        line-height: 1;
+        text-align: center;
+        padding: 6px 15px;
+        background: #27272a;
+        border-radius: 20px;
+        cursor: pointer;
+        outline: 0;
+        transition: all .3s ease;
+        margin: 0;
+        @include breakpoint(md) {
+            margin: 10px 0; 
+            font-size: 16px; 
+        }
+        a {
+            color: var(--color-gray);
+        }
+        &:hover,
+        &.active {
+            color: var(--color-black);
+            background: var(--color-white);
+            a {
+                color: var(--color-black);
+            }
+        }
+    }
+}

@@ -1,0 +1,51 @@
+/*-------------------
+ * Pagination
+---------------------*/
+
+.stdl-pagination {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    margin-top: 40px;
+    ul.page-numbers {
+        @extend %liststyle;
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        @include breakpoint(md) {
+            gap: 20px;
+        }
+        li {
+            margin: 0 !important;
+            .page-numbers {
+                display: block;
+                color: var(--color-white);
+                font-size: 12px; 
+                width: 25px;
+                height: 25px;
+                line-height: 24px;
+                border-radius: 4px;
+                text-align: center;
+                background: transparent;
+                border: 1px solid var(--color-gray);
+                transition: 0.3s ease-in-out;
+                @include breakpoint(md) {
+                    font-size: 15px; 
+                    width: 35px;
+                    height: 35px;
+                    line-height: 33px;
+                }
+                &:hover,
+                &.current {
+                    color: var(--color-black);
+                    background: var(--color-gray);
+                    border: 1px solid var(--color-gray);
+                }
+              
+            }
+        }
+    }
+}

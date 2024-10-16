@@ -1,0 +1,55 @@
+/*-------------------
+  Customer Reviews style
+---------------------*/
+
+.stdl-section-reviews {
+
+}
+
+.stdl-review-items {
+    margin-top: 40px;
+    .stdl-review-item {
+        .stdl-reviewer__info {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+           .stdl-reviewer__info--header {
+                display: flex;
+                justify-content: flex-start;
+                align-content: flex-start;    
+                @include breakpoint(md) {
+                    justify-content: flex-end;
+                }    
+           }
+           .stdl-reviews__star--wrap {
+                @extend %liststyle; 
+                display: flex;
+                li {
+                    svg {
+                        fill: var(--color-gray);
+                    }
+                }
+           }
+           &--footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+                .reviews-date,
+                .reviewer-name {
+                    color: var(--color-white);
+                    font-size: 16px;
+                    line-height: 21px;
+                    font-weight: 400;
+                    margin-bottom: 5px;
+                }
+                .review-owl-nav .review-next-btn, 
+                .review-owl-nav .review-prev-btn {
+                    color: var(--color-white);
+                }
+            }
+        }
+    }
+    @include breakpoint(md) {
+        margin-top: -60px;
+     }
+}

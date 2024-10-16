@@ -1,0 +1,70 @@
+/*-------------------
+  Simplify Block Styles
+---------------------*/
+
+.simplify-items {
+  &.stdl-grid-col-3{
+    gap: 0px;
+    @include breakpoint(md) {
+        gap: 50px;
+    }
+  }
+  .simplify-item {
+      padding: 36px 6px;
+      background: transparent;
+      border-radius: 10px;
+      &__header {
+          display: inline-flex;
+          gap: 14px;
+          align-items: flex-start;
+          flex-direction: column;
+          .header__title {
+              color: var(--color-white);
+              text-align: left;
+              font-size: 18px;
+              line-height: 34px;
+              margin-bottom: 0;
+              font-weight: 300;
+          }
+          .header__img {
+            line-height: 1;
+            span {
+                line-height: 1;
+                display: block;
+            }
+          }
+      }  
+      &__body {
+          padding-top: 10px;
+          p {
+              color: var(--color-white);
+              text-align: left;
+              font-size: 14px;
+              line-height: 23px;
+              margin-bottom: 0;
+          }
+      }
+  }
+  &.simplify-item--center_align {
+      .simplify-item {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          &__header {
+              align-items: center;
+              flex-direction: column;
+              text-align: center;
+              .header__title {
+                  text-align: center;
+              }
+          }
+          &__body {
+              text-align: center;
+              p {
+                  text-align: center;
+              }
+          }
+      }
+  }
+}

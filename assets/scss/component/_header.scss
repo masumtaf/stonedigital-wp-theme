@@ -1,0 +1,246 @@
+/*-------------------
+ * Header
+---------------------*/
+
+.stdl-header-top {
+    position: relative;
+    background: var(--color-black);
+    padding: 12px 20px 8px;
+    z-index: 9;
+    min-height: 46px;
+    @media (max-width: 450px) {
+        .container {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+    .stdl-header-top__content {
+        display: flex;
+        justify-content: space-between;
+    
+        flex-direction: column;
+      
+        .header-left {
+            display: none;
+            visibility: hidden;
+            @include breakpoint(md) {
+                display: block;
+                visibility: visible;
+            }
+            .stdl_btn {
+                padding: 8px 23px;
+                display: none;
+                visibility: hidden;
+                @include breakpoint(lg) {
+                    display: block;
+                    visibility: visible;
+                }  
+                @include breakpoint(xl) {
+                    display: none;
+                    visibility: hidden;
+                }
+            }
+        }
+        @include breakpoint(md) {
+            flex-direction: row;
+            align-items: center;
+        }
+    }
+    .stdl-cta__links {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        gap: 30px;
+        width: 100%;
+        line-height: 1;
+        .stdl-cta__link {
+            padding: 0;
+            margin: 0;
+            a {
+                display: flex;
+                align-items: center;
+                line-height: 1;
+                gap: 15px;
+                color: var(--color-white);
+                font-size: 13px;
+                span {
+                    &:first-child {
+                        height: 17px;
+                        svg {
+                            height: 17px;
+                        }
+                    }
+                }
+            }
+            &:nth-child(2) {
+                display: none;
+                @include breakpoint(md) {
+                   display: block;
+                }
+            }
+        }
+        .stdl_menu-toggle {
+            max-height: 24px;
+            line-height: 1;
+            display: none;
+            @include breakpoint(md) {
+                display: block;
+            }
+        }
+        @include breakpoint(md) {
+            width: auto;
+            justify-content: flex-end;
+        }
+        li {
+            line-height: 1;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    }
+    .dark-light-toggle {
+        .stdl-scheme-switch {
+            cursor: pointer;
+            line-height: 1;
+            svg {
+                stroke: #fff;
+            }
+            span {
+                transition: all 0.3s ease-in-out;
+            }
+        }
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    @include breakpoint(md) {
+        padding: 10px;
+    }
+}
+
+body.dark_theme {
+    .dark-light-toggle .light {
+        display: block;
+    }
+       .dark-light-toggle .dark {
+        display: none;
+    }
+    
+}
+.dark-light-toggle .light {
+    display: none;
+}
+body.light_theme {
+    .dark-light-toggle {
+        .stdl-scheme-switch {
+            svg {
+                stroke: #000;
+            }
+        }
+    }
+    .dark-light-toggle .light {
+        display: none;
+    }
+       .dark-light-toggle .dark {
+        display: block;
+    }
+    
+}
+
+body.dark_theme {
+    .dark-light-toggle {
+        .stdl-scheme-switch {
+            svg {
+                stroke: #fff;
+            }
+        }
+    }
+}
+header.stdl-header {
+    background-color: var(--color-dark);
+}
+.stdl-sticky-header {
+    position: relative;
+    padding: 20px 0;
+    z-index: 99;
+    background-color: var(--color-dark);
+    -webkit-transition: transform .3s ease-in-out;
+    transition: transform .3s ease-in-out;
+    @include breakpoint(md) {
+        padding: 20px 0;
+    }
+    @include breakpoint(xl) {
+        padding: 30px 0;
+    }
+    &.navbar-scrollup.navbar-sticky {
+        transform: translateY(-100%);
+        transition: .3s ease-in-out;
+        box-shadow: none;
+    }
+    &.navbar-sticky {
+      position: fixed;
+      width: 100%;
+      z-index: 997;
+      top: 0;
+      border-bottom: 1px solid #7474745c;
+      animation-name: fadeInDown;
+      @include breakpoint(md) {
+        padding: 20px 0;
+    }
+    }
+}
+
+.stdl-header__content {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    .stdl-header__menu {
+        display: none;
+        visibility: hidden;
+        @include breakpoint(lg) {
+            display: block;
+            visibility: visible;
+        }
+    }
+    @include breakpoint(md) {
+        grid-template-columns: 1fr 3.5fr;
+        justify-content: space-between;
+    }
+    @include breakpoint(xl) {
+        grid-template-columns: 1fr 3.5fr 1fr;
+        justify-content: space-between;
+    }
+}
+
+.stdl-header__cta {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 25px;
+    .stdl_btn {
+        display: none;
+        visibility: hidden;
+        @include breakpoint(md) {
+            display: block;
+            visibility: visible;
+        }
+        @include breakpoint(lg) {
+            display: none;
+            visibility: hidden;
+        }
+        @include breakpoint(xl) {
+            display: block;
+            visibility: visible;
+        }
+    }
+    .stdl_menu-toggle {
+        display: block;
+        max-height: 24px;
+        line-height: 1;
+        @include breakpoint(lg) {
+            display: none;
+        }
+    }
+
+}

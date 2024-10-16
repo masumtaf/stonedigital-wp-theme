@@ -1,0 +1,143 @@
+/*---------------------------------------------
+Template Name: Stone_Digital Limited
+Template URL: 
+Description: 
+Author: 
+Author URL: 
+Version: 1.0.0
+
+===============================================   
+STYLESHEET INDEXING
+|
+|___ Default Styles
+|	|___ Variables
+|	|___ Common
+|	|___ Reset Styels
+|	|___ Typography
+|	|___ 
+|	|___ 
+|	|___ 
+|
+|___ Elements Styles
+|	|___ Section Title
+|	|___ Button
+|	|___ Breadcrumb
+|	|___ 
+|	|___ 
+|
+|___Blocks Styles
+|	|___ Hero Styles
+|	|___ 
+|
+|___Template Styles
+|	|___ 
+|	|___ 
+|	|___ 
+|	|___ 
+|	|___ 
+|	|___
+
+|
+|___Blocks Styles
+|	|___ Header Styles
+|	|___ Footer Styles
+|
+|___
+|
+|___ 
+|
+|___ END STYLESHEET INDEXING
+
+--------------------------------------------*/
+
+/*=======================================================================
+1. Default Styles
+=========================================================================*/
+@import "default/fonts-loader";
+@import "default/variables";
+@import "default/common";
+@import "default/reset";
+@import "default/typography";
+@import "default/animations";
+
+/*=======================================================================
+2. Component Styles
+=========================================================================*/
+@import "component/button";
+@import "component/header";
+@import "component/menu";
+@import "component/section";
+@import "component/navigation";
+@import "component/counter";
+@import "component/toggle-menu";
+@import "component/popup";
+@import "component/widgets";
+@import "component/form";
+@import "component/comment-form";
+@import "component/fix-color";
+@import "component/pagination";
+@import "component/footer";
+
+
+/*=======================================================================
+3. Block Styles
+=========================================================================*/
+
+@import "block/banner";
+@import "block/hero";
+@import "block/google-reviews";
+@import "block/featured-logo";
+@import "block/featured-projects";
+@import "block/icon-service-box";
+@import "block/side-by-side";
+@import "block/brand-logo";
+@import "block/post-block";
+@import "block/contact-block";
+@import "block/faq";
+@import "block/showcase";
+@import "block/horizontal-slider";
+@import "block/our-service";
+@import "block/simplify";
+@import "block/claim-website-audit";
+@import "block/our-team";
+@import "block/customer-reviews";
+@import "block/icon-lists";
+@import "block/pricing-table";
+@import "block/testimonials";
+@import "block/career-form";
+@import "block/current-vacancies";
+@import "block/counter-icon";
+@import "block/client-feedback";
+@import "block/hero-v2";
+@import "block/google-map";
+@import "block/marque-block";
+@import "block/block-image-gallery";
+@import "block/custom-term-links";
+@import "block/single-page-banner";
+@import "block/masonry-gallery";
+@import "block/team-hobbies";
+@import "block/magnet-form";
+
+
+/*=======================================================================
+3. Template Styles
+=========================================================================*/
+
+
+/*=======================================================================
+4.Blog Styles 
+=========================================================================*/
+
+@import 'blog/blogs';
+
+/*=======================================================================
+5.Template Style
+=========================================================================*/
+
+@import 'template/page';
+@import 'template/archive';
+@import 'template/single-blog';
+@import 'template/single-team';
+@import 'template/single-project';
+@import 'template/case-study';
+@import 'template/404';

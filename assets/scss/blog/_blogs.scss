@@ -1,0 +1,30 @@
+/*-------------------------
+    Blog Styles  
+---------------------------*/
+.blog-banner {
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    &::after {
+        content: '';
+        position: absolute;
+        top: 105%;
+        left: 50%;
+        right: auto;
+        text-align: center;
+        background: #5f7d95;
+        opacity: 0.5;
+        -webkit-filter: blur(100px);
+        filter: blur(100px);
+        width: 640px;
+        height: 210px;
+        border-radius: 100%;
+        z-index: -1;
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        -webkit-transform: translate(-50%,-50%) translate3d(0, 0, 0);
+        -moz-transform: translate(-50%,-50%) translate3d(0, 0, 0);
+        -webkit-animation: bgcolor-change-3x 9s linear infinite normal;
+        animation: bgcolor-change-3x 9s linear infinite normal;
+    }
+}

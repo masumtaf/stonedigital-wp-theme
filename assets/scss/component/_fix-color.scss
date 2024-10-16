@@ -1,0 +1,103 @@
+/*-------------------
+ * Svg Style
+---------------------*/
+.light_theme {
+    .site-branding {
+        a {
+            img {
+                filter: invert(100%);
+            }
+        }
+    }
+    .header__img {
+        svg {
+            filter: invert(100%);
+        }
+    }
+    .featured-logo-item {
+        img {
+            filter: invert(100%);
+        }
+    }
+    .vacancies-item__thumb {
+        svg {
+            filter: invert(100%);
+        }
+    }
+}
+
+.light_theme {
+    .stdl-cpt__meta li a {
+        color: #fff;
+    }
+
+    .stdl-filterable-menu li {
+        color: #f8f8f8;
+        background: var(--color-light-gray);
+        &:hover {
+            color: var(--color-dark);
+            background: var(--color-white);
+        }
+        a {
+            color: #fff;
+        }
+       
+    }
+}
+.light_theme {
+    .pricing-table-item__body .stdl-inclusions__list ul li::before{
+        filter: invert(100%);
+    }
+    .stdl-popular-tag .pricing-table-item__body ul li.exclude-item:before {
+        filter: invert(100%); 
+    }
+}
+.dark_theme {
+    .pricing-table-item__body .stdl-inclusions__list ul li.exclude-item::before{
+        filter: invert(70%);
+    }  
+}
+.light_theme {
+    .stdl-toggle_menu {
+        .toggle_menu-inner {
+            .toggle_menu__header {
+                .stdl-close_btn {
+                    svg {
+                        stroke: #fff;
+                    }
+                }
+               
+            }
+        
+            .toggle_menu__body {
+                &.mobile-nav__container {
+                    .stdl-mobile-menu-wrapper li a {
+                        color: #fff;
+                    }
+                }
+            }
+        
+            .toggle_menu__footer {
+                .stdl-info a, 
+                .stdl-info span {
+                    color: #fff;
+                }
+                .stdl-social__icons {
+                    a{
+                        svg path {
+                            fill: #f0ecef;
+                        }
+                        &:hover {
+                            svg {
+                                path{
+                                    fill: #fff;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

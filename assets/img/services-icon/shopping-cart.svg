@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="25.647" height="26" viewBox="0 0 25.647 26">
+  <g id="shopping-cart-add--shopping-cart-checkout-add-plus-new" transform="translate(-2.002 -2)">
+    <path id="Union" d="M3.005,4.445A1.539,1.539,0,0,1,4.6,3H6.99A2.857,2.857,0,0,1,9.714,4.992l1,3.151h13.7a2.182,2.182,0,0,1,2.188,2.552,51.2,51.2,0,0,1-1.937,7.427,2.58,2.58,0,0,1-2.1,1.752,42.529,42.529,0,0,1-5.28.269,46.269,46.269,0,0,1-5.293-.257,2.794,2.794,0,0,1-2.321-2C8.427,13.954,7.6,10.463,6.429,6.429H4.595A1.538,1.538,0,0,1,3.006,4.984q-.009-.27,0-.539Z" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+    <path id="Ellipse_40" data-name="Ellipse 40" d="M34,39.286A2.286,2.286,0,1,0,36.286,37,2.286,2.286,0,0,0,34,39.286Z" transform="translate(-13.285 -14.571)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+    <path id="Ellipse_41" data-name="Ellipse 41" d="M14,39.286A2.286,2.286,0,1,0,16.286,37,2.286,2.286,0,0,0,14,39.286Z" transform="translate(-4.714 -14.571)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+    <path id="Vector_1455" data-name="Vector 1455" d="M28.714,22.5H23" transform="translate(-8.571 -8.357)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+    <path id="Vector_1456" data-name="Vector 1456" d="M28,17.5v5.714" transform="translate(-10.714 -6.214)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+  </g>
+</svg>

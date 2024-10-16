@@ -1,0 +1,116 @@
+/*-------------------
+  Claim Website Audit Styles
+---------------------*/
+.stdl-audit {
+    border-radius: 10px;
+    background: var(--color-dark-gray);
+    &.stdl-grid-col-2 {
+        gap: 0px;
+        @include breakpoint(md) {
+            gap: 80px;
+        }
+    }
+
+    .stdl-audit__content {
+        border-radius: 10px;
+        padding: 35px;
+        @include breakpoint(md) {
+            padding: 80px 80px 80px 0;
+        }
+        .stdl-title {
+            font-size: 24px;
+            line-height: 30px;
+            color: var(--color-gray);
+            font-weight: 400;
+            @include breakpoint(md) {
+                font-size: 31px;
+                line-height: 34px;
+            }
+        }
+        .stdl-description {
+            font-size: 16px;
+            line-height: 23px;
+            color: var(--color-white);
+        }
+    }
+    .stdl-audit__img {
+        img {
+            border-radius: 10px 10px 0 0;
+            height: 100%;
+            object-fit: cover;
+            @include breakpoint(md) {
+                border-radius: 10px 0px 0 10px;
+            }
+        }
+    }
+    .stdl-section-form {
+        padding-top: 40px;
+        .gform_wrapper {
+            form {
+                display: flex;
+                align-content: center;
+                justify-content: space-between;
+                flex-direction: column;
+                @include breakpoint(md) {
+                    flex-direction: row;
+                }
+            }
+            .gform_body {
+                width: 100%;
+                @include breakpoint(md) {
+                    width: 72%;
+                }
+                input[type=email] {
+                    font-family: var(--font-primary);
+                    font-size: 16px;
+                    line-height: 23px;
+                    color: var(--color-light-gray);
+                    padding: 6px 25px 12px 0;
+                    border: none;
+                    border-bottom: 1px solid var(--color-light-gray);
+                    border-radius: 0;
+                    background: transparent;
+                    transition: all .3s ease-in-out;
+                    @include breakpoint(md) {
+                        padding: 6px 25px 12px;
+                    }
+                }
+            }
+            .gform_footer {
+                margin: 20px 0 0;
+                @include breakpoint(md) {
+                    margin: 0;
+                    padding: 0;
+                }
+                input.gform_button {
+                    text-align: center;
+                    font-family: var(--font-primary);
+                    font-size: 15px;
+                    line-height: 1 !important;
+                    letter-spacing: 0;
+                    color: var(--color-dark);
+                    padding: 14px 25px;
+                    width: auto;
+                    background: var(--color-gray);
+                    border-radius: 5px;
+                    border: none;
+                }
+            } 
+        }
+        p {
+            font-size: 12px;
+            line-height: 23px;
+            letter-spacing: 0px;
+            color: var(--color-light-gray);
+        }
+    }
+    .gform_wrapper {
+        .gform-body.gform_body {
+            .gfield {
+                input[type="email"] {
+                    padding-left: 0;
+                }
+            }
+        }
+    }
+}

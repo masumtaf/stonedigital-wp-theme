@@ -1,0 +1,67 @@
+/*-------------------
+  Current Vacancies Styles
+---------------------*/
+
+.section-stdl-vacancies  {
+
+}
+
+.vacancies-items {
+    padding-top: 40px;
+    .vacancies-item {
+        padding: 36px 25px;
+        background: var(--color-dark-gray);
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        &__header {
+            display: inline-flex;
+            gap: 14px;
+            align-items: center;
+        }  
+        &__body {
+            padding-top: 10px;
+            .title {
+                color: var(--color-white);
+                text-align: center;
+                font-size: 18px;
+                line-height: 28px;
+                margin-bottom: 15px;
+                font-weight: 300;
+                @include breakpoint(md) {
+                    line-height: 34px;
+                    font-size: 24px;
+                }
+            }
+            p {
+                color: var(--color-white);
+                text-align: center;
+                font-size: 14px;
+                line-height: 23px;
+                margin-bottom: 0;
+            }
+        }
+        &__footer {
+            width: 100%;
+            a.btn-primary {
+                width: 100%;
+                // color: var(--color-gray);
+                // background: transparent;
+                // border: 1px solid var(--color-gray);
+                // &:hover {
+                //     color: var(--color-black);
+                //     background: var(--color-gray);
+                //     border-color: var(--color-gray);
+                // }
+            }
+        }
+        @include breakpoint(md) {
+            padding: 36px 36px;
+        }
+    }
+    @include breakpoint(md) {
+        padding-top: 80px;
+    }
+}
